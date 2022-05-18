@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css" />
+		<link rel="stylesheet" href="css/slick.min.css">
+		<link rel="stylesheet" href="css/jquery-modal.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	
+	<body>
+		<svg style="display: none">
+			<symbol id="phone" viewBox="0 0 24 24" fill="none">
+				<path d="M5 3C4.46957 3 3.96086 3.21071 3.58579 3.58579C3.21071 3.96086 3 4.46957 3 5V6C3 14.284 9.716 21 18 21H19C19.5304 21 20.0391 20.7893 20.4142 20.4142C20.7893 20.0391 21 19.5304 21 19V15.72C20.9998 15.5102 20.9337 15.3058 20.8109 15.1356C20.6882 14.9655 20.515 14.8383 20.316 14.772L15.823 13.274C15.5947 13.1981 15.3466 13.2071 15.1244 13.2993C14.9021 13.3915 14.7205 13.5607 14.613 13.776L13.483 16.033C11.0343 14.9264 9.07312 12.9649 7.967 10.516L10.224 9.388C10.4393 9.28045 10.6085 9.0989 10.7007 8.87665C10.7929 8.65439 10.8019 8.40634 10.726 8.178L9.228 3.683C9.16148 3.48398 9.03404 3.31093 8.86372 3.18835C8.6934 3.06577 8.48884 2.99988 8.279 3H5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</symbol>
+			<symbol id="mail" viewBox="0 0 24 24" fill="none">
+				<path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</symbol>
+			<symbol id="arrow" viewBox="0 0 18 31" fill="none">
+				<path d="M16.5 2L3 15.5L16.5 29" stroke="currentColor" stroke-width="3"/>
+			</symbol>
+
+			<svg><use xlink:href="#shop"></use></svg>
+		</svg>
+
+		<div class="wrapper">
+			<div class="start-page"><img class="start-page-logo" src="assets/images/svg/logo.svg" alt="">
+				<ul>
+					<li><a href="home.html" target="_blank">Главная</a></li>
+					<li><a href="policy.html" target="_blank">Политика в отношении обработки и защиты персональных данных</a></li>
+					<br><br>
+
+					<li><a href="#quiz" rel="modal:open">Опрос</a></li>
+					<li><a href="#quiz-done" rel="modal:open">Спасибо, что прошли опрос</a></li>
+					<li><a href="#quiz-none" rel="modal:open">Не прошли опрос</a></li>
+
+					<li><a href="#call" rel="modal:open">Запись на консультацию</a></li>
+					<li><a href="#call-done" rel="modal:open">Спасибо, за заявку</a></li>
+					<li><a href="#call-none" rel="modal:open">Не прошли заявку</a></li>
+
+					<li><a href="#consult" rel="modal:open">Консультация</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div id="quiz" class="modal modal-l modal-quiz">
+			<div class="modal-l__dialog">
+				<div class="modal-l__title">
+					Пройдите опрос и получите скидку на услуги банкротсва физического лица
+				</div>
+				<div class="modal-l__tx">Стоимость, которая будет рассчитана в данном калькуляторе будет на 100% соответствовать той стоимости, которую рассчитают наши специалисты в офисе (при условии, что Вы корректно заполнили все данные).</div>
+				<div class="modal-l__step">
+					<div class="modal-l__step-item modal-l__step-item_on active">1</div>
+					<div class="modal-l__step-item modal-l__step-item_tw">2</div>
+					<div class="modal-l__step-item modal-l__step-item_th">3</div>
+					<div class="modal-l__step-item modal-l__step-item_fr">4</div>
+				</div>
+
+				<div class="modal-l__change">
+					<div class="modal-l__change-item modal-l__change-on open">
+						<div class="modal-l__change-title">Какая у вас задолженность?</div>
+						<form>
+							<div class="modal-l__change-form">
+								<div class="modal-l__change-form-item">
+									<input type="radio" id="rd1" name="rd">
+									<label for="rd1">до 500 тысяч рублей</label>
+								</div>
+								<div class="modal-l__change-form-item">
+									<input type="radio" id="rd2"  name="rd" checked>
+									<label for="rd2">от 500 тысяч рублей до 1 миллиона рублей</label>
+								</div>
+								<div class="modal-l__change-form-item">
+									<input type="radio" id="rd3" name="rd">
+									<label for="rd3">свыше 1 миллиона рублей</label>
+								</div>
+							</div>
+						</form>
+
+						<button type="button" class="button button-primary js-step1">Далее</button>
+					</div>
+
+					<div class="modal-l__change-item modal-l__change-tw">
+						<div class="modal-l__change-title">Ваше имущество:</div>
+						<form>
+							<div class="modal-l__change-form">
+								<div class="modal-l__change-form-item">
+									<input type="checkbox" id="ch1" name="ch" checked>
+									<label for="ch1">дом или квартира в собственности</label>
+								</div>
+								<div class="modal-l__change-form-item">
+									<input type="checkbox" id="ch2" name="ch">
+									<label for="ch2">вклад в банке</label>
+								</div>
+								<div class="modal-l__change-form-item">
+									<input type="checkbox" id="ch3" name="ch">
+									<label for="ch3">автомобиль</label>
+								</div>
+							</div>
+						</form>
+
+						<button type="button" class="button button-primary js-step2">Далее</button>
+					</div>
+
+					<div class="modal-l__change-item modal-l__change-th">
+						<div class="modal-l__change-title">Ваш доход за месяц</div>
+						<form>
+							<div class="modal-l__change-form">
+								<div class="modal-l__change-form-item">
+									<input type="text" class="input" placeholder="10 000 рублей">
+								</div>
+							</div>
+						</form>
+
+						<button type="button" class="button button-primary js-step3">Далее</button>
+					</div>
+
+					<div class="modal-l__change-item modal-l__change-fr">
+						<div class="modal-l__change-title">Контактные данные</div>
+						<form id="form2">
+							<div class="modal-l__change-form">
+								<div class="modal-l__change-form-item">
+									<input type="text" class="input" placeholder="Имя" id="name2">
+									<span class="validation validateName2">
+										<span class="nameValidationImg2"></span>
+    							</span>
+								</div>
+								<div class="modal-l__change-form-item">
+									<input type="text" class="input" placeholder="+7 (000) 000-00-00" id="phone2" name="phone-number">
+									<span class="validation validatePhone2" >
+											<span class="phoneValidationImg2"></span>
+    							</span>
+								</div>
+								<div class="modal-l__change-form-item">
+									<div class="tx">Нажимая кнопку «Отправить» вы даёте согласие на обработку ваших персональных данных</div>
+								</div>
+							</div>
+						</form>
+
+						<button type="button" class="button button-primary submitBtn2">Отправить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="quiz-done" class="modal modal-l">
+			<div class="modal-l__dialog">
+				<div class="modal-l__main">
+					Спасибо, что прошли опрос, скоро наш специалист свяжется с вами
+				</div>
+				<a href="#" class="button button-primary" rel="modal:close">Хорошо</a>
+			</div>
+		</div>
+		<div id="quiz-none" class="modal modal-l">
+			<div class="modal-l__dialog">
+				<div class="modal-l__main">
+					Что-то пошло не так и ваша заявка не отправлена, попробуйте пройти опрос еще раз
+				</div>
+				<a href="#quiz" rel="modal:open" class="button button-primary">Пройти опрос</a>
+			</div>
+		</div>
+
+		<div id="call" class="modal modal-l modal-call">
+			<div class="modal-l__dialog">
+				<div class="modal-l__main">
+					Запись на консультацию
+				</div>
+				<div class="modal-l__form">
+					<form id="form3">
+						<div class="form__fr">
+							<div class="form__fr-title">Контактные данные</div>
+							<div class="form__fr-item">
+								<input type="text" class="input" placeholder="Имя" id="name3">
+								<span class="validation validateName3">
+										<span class="nameValidationImg3"></span>
+    							</span>
+							</div>
+							<div class="form__fr-item">
+								<input type="text" class="input" placeholder="+7 (000) 000-00-00" name="phone-number" id="phone3">
+								<span class="validation validatePhone3" >
+											<span class="phoneValidationImg3"></span>
+    							</span>
+							</div>
+							<div class="form__fr-item">
+								<div class="tx">Нажимая кнопку «Отправить заявку» вы даёте согласие на обработку ваших персональных данных.</div>
+							</div>
+							<div class="form__fr-item">
+								<button type="button" class="button button-primary submitBtn3">Отправить</button>
+							</div>
+
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="call-done" class="modal modal-l">
+			<div class="modal-l__dialog">
+				<div class="modal-l__main">
+					Спасибо за заявку, скоро наш специалист свяжется с вами
+				</div>
+				<a href="#" class="button button-primary" rel="modal:close">Хорошо</a>
+			</div>
+		</div>
+		<div id="call-none" class="modal modal-l">
+			<div class="modal-l__dialog">
+				<div class="modal-l__main">
+					Что-то пошло не так и ваша заявка не отправлена, попробуйте еще раз
+				</div>
+				<a href="#call" rel="modal:open" class="button button-primary">Записаться на консультацию</a>
+			</div>
+		</div>
+
+		<div id="consult" class="modal modal-l modal-consult">
+			<div class="modal-l__dialog">
+				<div class="modal-consult__inner">
+					<div class="modal-consult__item">
+						<div class="modal-consult__title">
+							Консультация:
+							по применению процедуры банкротства,
+							по составу документов
+						</div>
+						<div class="modal-consult__tx">А ещё элементы политического процесса и по сей день остаются уделом либералов, которые жаждут быть объединены в целые кластеры себе подобных. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: убеждённость некоторых оппонентов выявляет срочную потребность существующих финансовых и административных условий. Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обусловливает важность позиций, занимаемых участниками в отношении поставленных задач.</div>
+					</div>
+					<div class="modal-consult__item">
+						<div class="modal-consult__img" style="background-image: url('images/bg9.jpg')"></div>
+						<div class="modal-consult__form" style="background-image: url('images/bg8.png')">
+							<form id="form4">
+								<div class="form__fr">
+									<div class="form__fr-title">Запись на консультацию</div>
+									<div class="form__fr-item">
+										<input type="text" class="input" placeholder="Имя" id="name4">
+										<span class="validation validateName4">
+										<span class="nameValidationImg4"></span>
+    							</span>
+									</div>
+									<div class="form__fr-item">
+										<input type="text" class="input" placeholder="+7 (000) 000-00-00" name="phone-number" id="phone4">
+										<span class="validation validatePhone4" >
+											<span class="phoneValidationImg4"></span>
+    							</span>
+									</div>
+									<div class="form__fr-item">
+										<button type="button" class="button button-primary submitBtn4">Отправить</button>
+									</div>
+
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="js/script-jquery.js" ></script>
+		<script src="js/jquery-modal.js"></script>
+		<script src="js/jquery.mask.js" ></script>
+
+		<script src="js/slick.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
