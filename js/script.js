@@ -1,4 +1,17 @@
 $(document).ready(function (){
+    $('a[rel="modal:open"]').click(function(event) {
+        $(this).modal({
+            fadeDuration: 250
+        });
+        return false;
+    });
+
+    $('.js-step1').on('click', function(){
+        $('.modal-l__change-tw').addClass('open');
+        $(this).parent().addClass('none');
+        $('.modal-l__step-item_tw').addClass('active');
+    });
+
     $('.js-step1').on('click', function(){
         $('.modal-l__change-tw').addClass('open');
         $(this).parent().addClass('none');
@@ -26,7 +39,7 @@ $(document).ready(function (){
         var anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $(anchor.attr('href')).offset().top
-        }, 1000);
+        }, 2000);
         e.preventDefault();
     });
 
