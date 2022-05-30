@@ -345,12 +345,14 @@ $(document).ready(function (){
             e.preventDefault();
             var $this = $(this);
 
-            if (!$this.parent().parent().hasClass("accordion-active")) {
+            if (!$this.hasClass("accordion-active")) {
                 $(".accordion__content").slideUp(400);
                 $(".accordion__title").removeClass("accordion-active");
+                $(".accordion__item").removeClass("accordion-active");
                 $('.accordion__arrow').removeClass('accordion__rotate');
             }
 
+            $this.toggleClass("accordion-active");
             $this.parent().parent().toggleClass("accordion-active");
             $this.next().slideToggle();
             $('.accordion__arrow',this).toggleClass('accordion__rotate');
