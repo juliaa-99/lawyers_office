@@ -102,7 +102,7 @@ h2:before { content: ''; width: 30px; height: 30px; display: block; position: ab
 .slick-dots li.slick-active { background: #fff; border-color: #fff; }
 .slick-dots li:hover { border-color: #fff; }
 .slick-dots li button { display: none; }
-.slick-arrow { transform: none; }
+.slick-arrow { transform: none; z-index: 9; }
 .reviews__slider .slick-arrow { top: 100px; bottom: 0; margin: auto; }
 @media screen and (max-width: 991px) { .reviews__slider .slick-arrow { display: none !important; } }
 .slick-arrow:before { display: none; }
